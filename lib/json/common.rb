@@ -175,7 +175,7 @@ module JSON
       :max_nesting  => false,
       :allow_nan    => true
     }.update(opts)
-    Parser.new(source, opts).parse
+    Parser.new(source, **(opts||{})).parse
   end
 
   # Generate a JSON document from the Ruby data structure _obj_ and return
